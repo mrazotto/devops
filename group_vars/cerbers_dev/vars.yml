@@ -1,0 +1,7 @@
+---
+ENV: DEV
+ansible_user: cerbers
+ansible_ssh_private_key_file: ~/.ssh/mrazotto/cerbers
+
+distr_dest: "/u01/cerbers/{{ansible_user}}/cerbers_{{ENV}}"
+cerbers_tmp_dir: "{{distr_dest}}/tmp"

@@ -1,0 +1,1 @@
+ansible-playbook deploy_cerbers.yml -e dest_host=cerbers_dev

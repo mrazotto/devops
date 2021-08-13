@@ -1,0 +1,4 @@
+- name: Deploy CERBERS - 4e kavo
+  file:
+    path: "{{cerbers_tmp_dir}}"
+    state: directory
