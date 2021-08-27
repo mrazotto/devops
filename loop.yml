@@ -1,0 +1,5 @@
+- name: Loop Playbook
+  hosts: all
+  become: yes
+  roles:
+    - test

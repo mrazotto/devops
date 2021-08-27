@@ -1,0 +1,18 @@
+- name: Say hello to all
+  debug:
+    msg: "Hello {{item}}"
+  with_items:
+    - "Vasya"
+    - "Petya"
+    - "Masha"
+    - "Olya"
+
+- name: Loop until (example)
+  shell: echo -n Z >> myfile.txt && cat myfile.txt
+  register: output
+  delay: 2
+  retries: 10
+  until: output.stdout.find("ZZZZ") == false
+
+- name: Print final output
+  debug: var=output.stdout

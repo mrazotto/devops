@@ -1,0 +1,11 @@
+- name: Deploy CERBERS [blserver] - Hi message!
+  debug:
+    msg: "BLserver is changing!.."
+
+- name: Deploy CERBERS [blserver] - unarchive blserver
+  unarchive:
+    src: "{{distr_dest}}/nydus.zip"
+    dest: "{{ops_dest}}"
+    include:
+      - blserver/*
+    remote_src: yes

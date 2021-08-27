@@ -1,0 +1,6 @@
+- name: Copy nydus to mrazotto
+  hosts: all
+  any_errors_fatal: yes
+  become: yes
+  roles:
+    - deploy-cerbers

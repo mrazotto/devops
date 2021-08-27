@@ -1,0 +1,3 @@
+- name: Deploy CERBERS - Chech smths
+  debug:
+    msg: 4e kavo! Это ST / IFT / PSI !!!
