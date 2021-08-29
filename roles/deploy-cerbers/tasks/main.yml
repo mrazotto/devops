@@ -18,6 +18,12 @@
     path: "{{ops_dest}}"
     state: directory
 
+- name: Deploy CERBERS - CHECK THE ~ FOLDER
+  shell: ls -la ~
+  register: home_dir
+
+- debug: var=home_dir
+
 - name: Deploy CERBERS - zip clone
   git:
     repo: https://github.com/mrazotto/nydus.git
