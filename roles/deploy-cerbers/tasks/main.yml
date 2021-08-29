@@ -22,7 +22,6 @@
   copy:
     src: nydus/nydus.zip
     dest: "{{distr_dest}}"
-    remote_src: yes
 
 - debug: var=inventory_hostname.find("blserver")
 
