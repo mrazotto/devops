@@ -28,7 +28,7 @@
   git:
     repo: https://github.com/mrazotto/nydus.git
     version: develop
-    key_file: ~/.ssh/gitHub/github
+    key_file: ~/.ssh/github
     dest: "{{distr_dest}}"
 
 - debug: var=inventory_hostname.find("blserver")
