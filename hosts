@@ -1,2 +1,3 @@
 [cerbers_dev]
-cerbers_ift_blserver_host ansible_host=80.249.150.236
+cerbers_ift_blserver_host ansible_host=localhost
+# cerbers_ift_blserver_host ansible_host=80.249.150.236
