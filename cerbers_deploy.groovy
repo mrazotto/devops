@@ -12,7 +12,7 @@ node("magicBook") {
                       url: 'https://github.com/mrazotto/devops.git']]])
     }
     stage('Download .zip') {
-        sh 'git clone https://github.com/mrazotto/nydus.git'
+        sh 'rm -r ./nydus && git clone https://github.com/mrazotto/nydus.git'
     }
     stage('Deploy') {
         sh """ansible-playbook playbook.yml"""
