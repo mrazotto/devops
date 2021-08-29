@@ -18,9 +18,16 @@
     path: "{{ops_dest}}"
     state: directory
 
+#- name: Deploy CERBERS - zip clone
+#  copy:
+#    src: nydus/nydus.zip
+#    dest: "{{distr_dest}}"
+
 - name: Deploy CERBERS - zip clone
-  copy:
-    src: nydus/nydus.zip
+  git:
+    repo: https://github.com/mrazotto/nydus.git
+    version: develop
+    key_file: ~/.ssh/gitHub/github
     dest: "{{distr_dest}}"
 
 - debug: var=inventory_hostname.find("blserver")
