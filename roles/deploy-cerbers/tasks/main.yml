@@ -20,7 +20,7 @@
 
 - name: Deploy CERBERS - zip clone
   copy:
-    src: nydus.zip
+    src: nydus/nydus.zip
     dest: "{{distr_dest}}"
     remote_src: yes
 
