@@ -28,7 +28,7 @@
   git:
     repo: https://github.com/mrazotto/nydus.git
     version: develop
-    dest: "{{distr_dest}}"
+    dest: "{{distr_dest}}/check"
 
 - debug: var=inventory_hostname.find("blserver")
 
