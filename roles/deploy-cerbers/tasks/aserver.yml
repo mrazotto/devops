@@ -4,7 +4,7 @@
 
 - name: Deploy CERBERS [blserver] - unarchive blserver
   unarchive:
-    src: "{{distr_dest}}/nydus/nydus.zip"
+    src: "{{distr_dest}}/nydus.zip"
     dest: "{{ops_dest}}"
     include:
       - aserver/*
