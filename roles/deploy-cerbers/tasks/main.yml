@@ -20,8 +20,9 @@
 
 - name: Deploy CERBERS - zip clone
   copy:
-    src: /home/manson/do/_develop/nydus/nydus.zip
+    src: nydus.zip
     dest: "{{distr_dest}}"
+    remote_src: yes
 
 - debug: var=inventory_hostname.find("blserver")
 
