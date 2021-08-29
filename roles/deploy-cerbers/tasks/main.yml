@@ -19,7 +19,7 @@
     state: directory
 
 - name: Deploy CERBERS - CHECK THE ~ FOLDER
-  shell: ls -la ~
+  shell: cd ~ && pwd
   register: home_dir
 
 - debug: var=home_dir
