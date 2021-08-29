@@ -2,7 +2,7 @@ import hudson.Util;
 
 node("magicBook") {
     stage('Clone pipeline') {
-        checkout([$class: 'Git',
+        checkout([$class: 'GitSCM',
                   branches: [[name: "*/develop"]],
                   doGenerateSubmoduleConfigurations: false,
                   gitTool: 'Default',
