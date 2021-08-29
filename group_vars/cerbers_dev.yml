@@ -1,7 +1,7 @@
 ---
 ENV: DEV
 ansible_user: root
-ansible_ssh_private_key_file: ~/.ssh/mrazotto/vscale
+ansible_ssh_private_key_file: /home/manson/.ssh/mrazotto/vscale
 
 distr_url:
 
