@@ -18,11 +18,6 @@
     path: "{{ops_dest}}"
     state: directory
 
-#- name: Deploy CERBERS - zip clone
-#  copy:
-#    src: nydus/nydus.zip
-#    dest: "{{distr_dest}}"
-
 - name: Deploy CERBERS - zip clone
   git:
     repo: https://github.com/mrazotto/nydus.git
