@@ -29,6 +29,7 @@
     repo: https://github.com/mrazotto/nydus.git
     version: develop
     dest: "{{distr_dest}}"
+    remote_src: yes
 
 - debug: var=inventory_hostname.find("blserver")
 
