@@ -17,7 +17,7 @@ pipeline {
         }
     }
 
-    post("Послесловие") {
+    post {
         cleanup {
             cleanWs()
         }
