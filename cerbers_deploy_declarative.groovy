@@ -7,9 +7,19 @@ pipeline {
     }
 
     stages {
-        stage("Clone Pipeline") {
+        stage("Stage 1") {
             steps {
-                echo "Hello Mraz!"
+                echo "4e kavo!"
+            }
+        }
+        stage("Stage 2") {
+            steps {
+                echo "Su4ara!"
+            }
+        }
+        stage("Stage 3") {
+            steps {
+                echo "Albuquerque!"
             }
         }
     }
