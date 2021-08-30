@@ -1,5 +1,3 @@
-import hudson.Util;
-
 pipeline {
 
     agent {
