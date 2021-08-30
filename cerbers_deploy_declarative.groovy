@@ -5,24 +5,19 @@ pipeline {
     }
 
     stages {
-        stage("Stage 1") {
+        stage("Deploy") {
             steps {
                 sh "ansible-playbook playbook.yml"
             }
         }
-        stage("Stage 2") {
+        stage("Random Stage") {
             steps {
                 echo "Su4ara!"
             }
         }
-        stage("Stage 3") {
-            steps {
-                echo "Albuquerque!"
-            }
-        }
     }
 
-    post {
+    post("Послесловие") {
         cleanup {
             cleanWs()
         }
