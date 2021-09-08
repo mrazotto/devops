@@ -7,3 +7,8 @@ distr_url:
 
 distr_dest: "/u01/cerbers/distr"
 ops_dest: "/u01/cerbers/ops"
+
+logging.file.name: log/a.log
+
+kafka-ext.bootstrap: 4eKavo
+kafka-ext.security-protocol: Su4ara
