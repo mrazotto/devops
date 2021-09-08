@@ -14,7 +14,7 @@
   replace:
     path: "{{ops_dest}}/aserver/config/application.properties"
     regexp: "{{kafka_ext_item.regexp}}"
-    replace: "{{kafka_ext_item.newLine}}"
+    replace: "{{kafka_ext_item.newline}}"
   with_items:
     - {regexp: '^kafka-ext.bootstrap.*', newline: 'kafka-ext.bootstrap={{kafka_ext_bootstrap}}'}
     - {regexp: '^kafka-ext.security-protocol.*', newline: 'kafka-ext.security-protocol={{kafka_ext_security_protocol}}'}
