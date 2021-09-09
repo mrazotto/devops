@@ -11,7 +11,7 @@ node("magicBook") {
                           credentialsId : "mrazotto",
                           url           : 'https://github.com/mrazotto/cerbers.git']]])
 
-        dir('sberrec_devops') {
+        dir('cerbers_devops') {
             checkout([$class            : 'GitSCM',
                       branches          : [[name: "*/develop"]],
                       gitTool           : 'Default',
