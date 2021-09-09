@@ -20,6 +20,11 @@ node("magicBook") {
                           url           : 'https://github.com/mrazotto/devops.git']]])
         }
     }
+
+    stage('Create Configs Templates ') {
+        sh cerbers_devops/scripts/service/cerbers_templates.sh
+    }
+
     stage('Build distrib') {
         sh """zip -r cerbers.zip \
                 ./aserver/config/application.properties \
