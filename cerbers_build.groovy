@@ -22,6 +22,7 @@ node("magicBook") {
     }
 
     stage('Create Configs Templates ') {
+        sh "mkdir cerbers_devops/scripts/service/"
         sh "sh cerbers_devops/scripts/service/cerbers_templates.sh"
     }
 
