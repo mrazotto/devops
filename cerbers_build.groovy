@@ -17,7 +17,7 @@ node("magicBook") {
                       gitTool           : 'Default',
                       userRemoteConfigs : [[
                           credentialsId : "mrazotto",
-                          url           : 'https://github.com/mrazotto/devops.git']]])
+                          url           : 'ssh://git@github.com:mrazotto/devops.git']]])
         }
     }
     stage('Build distrib') {
