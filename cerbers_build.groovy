@@ -2,6 +2,8 @@ import hudson.Util;
 
 node("magicBook") {
     stage('Git Clone') {
+        cleanWs()
+
             checkout([$class            : 'GitSCM',
                       branches          : [[name: "*/develop"]],
                       doGenerateSubmoduleConfigurations: false,
