@@ -6,6 +6,10 @@ propName=""
 propValue=""
 propAnsName=""
 
+mkdir -p cerbers_templates/blserver/config
+mkdir -p cerbers_templates/aserver/config
+mkdir -p cerbers_templates/restserver/config
+
 for item in $(cat $blserver_config | tr -d ' ')
 do
     if [[ $item == *"="* ]] && [[ $item != *"#"* ]]
