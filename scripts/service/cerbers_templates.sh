@@ -15,6 +15,6 @@ do
         propAnsName=`echo $propName | sed 's/[-|.]/_/g'`
 
         echo $propName | { tr -d '\n' ; echo "={% if $propAnsName is defined %}{{$propAnsName}}{% else %}$propValue{% endif %}"; } \
-            >> ./cerbers_templates/blserver/config/application.properties.j2
+            >> ./blserver/config/application.properties.j2
     fi
 done
