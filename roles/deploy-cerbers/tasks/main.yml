@@ -44,13 +44,6 @@
     tasks_from: aserver
   when: inventory_hostname.find("aserver") != -1
 
-- name: Deploy CERBERS - INFO
-  shell: ls -la /u01/cerbers/ops
-  register: deploy_info
-
-- debug: var=deploy_info.stdout_lines
-- debug: var=inventory_hostname
-
 - name: Deploy CERBERS - Re-create DB
   include_role:
     name: deploy-cerbers
@@ -59,13 +52,13 @@
         inventory_hostname.find("_ift_") != -1 or
         inventory_hostname.find("_psi_") != -1
 
-- name: Deploy CERBERS - Check Fail 1
-  shell: echo Hello World
-  register: result
-  failed_when: result.stdout.find("Hello") != -1
-  ignore_errors: yes
-
-- debug: var=result
+#- name: Deploy CERBERS - Check Fail 1
+#  shell: echo Hello World
+#  register: result
+#  failed_when: result.stdout.find("Hello") != -1
+#  ignore_errors: yes
+#
+#- debug: var=result
 
 ##- set_fact:
 ##    my_var: ansible_hostname = {{ansible_hostname}}, distr_dest = {{distr_dest}}, ops_dest = {{ops_dest}}
