@@ -13,5 +13,5 @@
 
 - name: Deploy CERBERS [aserver] - templating...
   template:
-    src: "{{ops_dest}}/cerbers_templates/aserver/application.properties.j2"
+    src: "{{ops_dest}}/cerbers_templates/aserver/config/application.properties.j2"
     dest: "{{ops_dest}}/aserver/config/application.properties"
