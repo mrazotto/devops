@@ -12,3 +12,7 @@ kafka_ext_keystore_password: MrWhite
 db_persist: Проперсистенно!
 
 ### restserver, arestserver, autserver vars
+
+app_restserver_page_size: 555
+app_restserver_cors_host1: http://very-good1.com
+app_restserver_cors_host2: https://very-good2.com

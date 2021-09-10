@@ -21,4 +21,3 @@
     - {regexp: '^kafka-ext.security-protocol.*', newline: 'kafka-ext.security-protocol={{kafka_ext_security_protocol}}'}
   loop_control:
     loop_var: kafka_ext_item
-
