@@ -18,7 +18,7 @@ do
         propValue=`echo $item | cut -d '=' -f 2`
         propAnsName=`echo $propName | sed 's/[-|.]/_/g'`
 
-        echo $propName | { tr -d '\n' ; echo "={% if $propAnsName is defined %}{{$propAnsName}}{% else %}$propValue{% endif %}"; } \
+        echo $propName | { tr -d '\n' ; echo "={% if $propAnsName is defined %}{{$propAnsName}}{% else %}$propValue{%- endif %}"; } \
             >> ./cerbers_templates/blserver/config/application.properties.j2
     fi
 done
