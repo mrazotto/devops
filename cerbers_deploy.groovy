@@ -1,6 +1,9 @@
 import hudson.Util;
 
 node("magicBook") {
+
+    cleanWs()
+
     stage('Clone pipeline') {
         checkout([$class: 'GitSCM',
                   branches: [[name: "*/develop"]],
