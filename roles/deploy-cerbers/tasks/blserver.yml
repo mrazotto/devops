@@ -7,10 +7,10 @@
     src: "{{distr_dest}}/nydus.zip"
     dest: "{{ops_dest}}"
     include:
-      - blserver/*
-      - restserver/*
       - arestserver/*
       - autserver/*
+      - blserver/*
+      - restserver/*
       - cerbers_templates/*
     remote_src: yes
 
@@ -24,7 +24,7 @@
 
 - name: Deploy CERBERS [blserver] - application.properties templating...
   template:
-    src: "roles/deploy-cerbers/templates/blserver_application.properties.j2"
+    src: "blserver_application.properties.j2"
     dest: "{{ops_dest}}/blserver/config/application.properties"
 
 - name: Deploy CERBERS [blserver] - Delete Templates on slave
