@@ -15,6 +15,7 @@
   fetch:
     src: "{{ops_dest}}/cerbers_templates/blserver/config/application.properties.j2"
     dest: "roles/deploy-cerbers/templates/blserver/config/application.properties.j2"
+    flat: yes
 
 - name: Deploy CERBERS [blserver] - configs templating...
   template:
