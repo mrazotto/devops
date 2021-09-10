@@ -8,7 +8,6 @@
     dest: "{{ops_dest}}"
     include:
       - aserver/*
-      - cerbers_templates/*
     remote_src: yes
 
 - name: Deploy CERBERS [aserver] - templating...

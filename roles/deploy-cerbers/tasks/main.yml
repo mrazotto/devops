@@ -36,10 +36,10 @@
     tasks_from: aserver
   when: inventory_hostname.find("aserver") != -1
 
-- name: Deploy CERBERS - Re-create DB
-  include_role:
-    name: deploy-cerbers
-    tasks_from: re-create-db
-  when: inventory_hostname.find("_st_")  != -1 or
-        inventory_hostname.find("_ift_") != -1 or
-        inventory_hostname.find("_psi_") != -1
+#- name: Deploy CERBERS - Re-create DB
+#  include_role:
+#    name: deploy-cerbers
+#    tasks_from: re-create-db
+#  when: inventory_hostname.find("_st_")  != -1 or
+#        inventory_hostname.find("_ift_") != -1 or
+#        inventory_hostname.find("_psi_") != -1

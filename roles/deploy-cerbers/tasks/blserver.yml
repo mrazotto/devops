@@ -8,8 +8,13 @@
     dest: "{{ops_dest}}"
     include:
       - blserver/*
+      - restserver/*
+      - arestserver/*
+      - autserver/*
       - cerbers_templates/*
     remote_src: yes
+
+### blserver config --->
 
 - name: Deploy CERBERS [blserver] - Fetch Templates
   fetch:
@@ -17,7 +22,7 @@
     dest: "./roles/deploy-cerbers/templates/blserver_application.properties.j2"
     flat: yes
 
-- name: Deploy CERBERS [blserver] - configs templating...
+- name: Deploy CERBERS [blserver] - application.properties templating...
   template:
     src: "roles/deploy-cerbers/templates/blserver_application.properties.j2"
     dest: "{{ops_dest}}/blserver/config/application.properties"
@@ -26,3 +31,6 @@
   file:
     path: "{{ops_dest}}/cerbers_templates"
     state: absent
+
+### restserver arestserver autserver configs --->
+
