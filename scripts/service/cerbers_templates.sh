@@ -20,5 +20,6 @@ do
 
         echo $propName | { tr -d '\n' ; echo "={% if $propAnsName is defined %}{{$propAnsName}}{% else %}$propValue{%- endif %}"; } \
             >> ./cerbers_templates/blserver/config/application.properties.j2
+        echo >> ./cerbers_templates/blserver/config/application.properties.j2
     fi
 done
