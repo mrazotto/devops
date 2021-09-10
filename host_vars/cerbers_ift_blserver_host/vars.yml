@@ -4,5 +4,5 @@ ansible_ssh_private_key_file: ~/.ssh/mrazotto/vscale
 
 logging_file_name: log/bl.log
 
-kafka_ext_bootstrap: bl-bootstrap
-kafka_ext_security_protocol: bl-security-protocol
+kafka_ext_bootstrap: ift-bl-bootstrap
+kafka_ext_security_protocol: ift-bl-security-protocol

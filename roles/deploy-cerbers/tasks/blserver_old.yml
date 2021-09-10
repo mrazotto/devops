@@ -1,0 +1,24 @@
+- name: Deploy CERBERS [blserver] - Hi message!
+  debug:
+    msg: "BLserver is changing!.."
+
+- name: Deploy CERBERS [blserver] - unarchive blserver
+  unarchive:
+    src: "{{distr_dest}}/nydus.zip"
+    dest: "{{ops_dest}}"
+    include:
+      - blserver/*
+      - cerbers_templates/*
+    remote_src: yes
+
+- name: Deploy CERBERS [blserver] - VARS
+  replace:
+    path: "{{ops_dest}}/blserver/config/application.properties"
+    regexp: "{{kafka_ext_item.regexp}}"
+    replace: "{{kafka_ext_item.newline}}"
+  with_items:
+    - {regexp: '^kafka-ext.bootstrap.*', newline: 'kafka-ext.bootstrap={{kafka_ext_bootstrap}}'}
+    - {regexp: '^kafka-ext.security-protocol.*', newline: 'kafka-ext.security-protocol={{kafka_ext_security_protocol}}'}
+  loop_control:
+    loop_var: kafka_ext_item
+

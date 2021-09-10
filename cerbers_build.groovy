@@ -31,6 +31,12 @@ node("magicBook") {
         sh """zip -r cerbers.zip \
                 ./aserver/config/application.properties \
                 ./blserver/config/application* \
-                ./restserver/config/application.properties"""
+                ./restserver/config/application.properties \
+                ./cerbers_templates"""
     }
+
+    stage('Send to Nydus') {
+
+    }
+
 }

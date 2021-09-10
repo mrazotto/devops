@@ -18,19 +18,11 @@
     path: "{{ops_dest}}"
     state: directory
 
-- name: Deploy CERBERS - CHECK THE ~ FOLDER
-  shell: cd ~ && pwd
-  register: home_dir
-
-- debug: var=home_dir
-
 - name: Deploy CERBERS - zip clone
   git:
     repo: https://github.com/mrazotto/nydus.git
     version: develop
     dest: "{{distr_dest}}"
-
-- debug: var=inventory_hostname.find("blserver")
 
 - name: Deploy CERBERS - unarchive --> blserver <--
   include_role:
@@ -51,26 +43,3 @@
   when: inventory_hostname.find("_st_")  != -1 or
         inventory_hostname.find("_ift_") != -1 or
         inventory_hostname.find("_psi_") != -1
-
-#- name: Deploy CERBERS - Check Fail 1
-#  shell: echo Hello World
-#  register: result
-#  failed_when: result.stdout.find("Hello") != -1
-#  ignore_errors: yes
-#
-#- debug: var=result
-
-##- set_fact:
-##    my_var: ansible_hostname = {{ansible_hostname}}, distr_dest = {{distr_dest}}, ops_dest = {{ops_dest}}
-##
-##- debug:
-##    var: my_var
-##
-##- debug:
-##    var: ansible_docker0.ipv4.address
-##
-##- shell: date | cut -d " " -f 4
-##  register: date_of_server
-##
-##- debug:
-##    var: date_of_server.stdout_lines
