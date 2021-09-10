@@ -1,4 +1,4 @@
 - name: Deploy CERBERS
-  hosts: "{{dest_host}}"
+  hosts: all
   roles:
     - deploy-cerbers
