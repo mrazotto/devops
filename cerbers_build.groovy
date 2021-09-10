@@ -29,11 +29,11 @@ node("magicBook") {
 
     stage('Build distrib') {
         sh """zip -r nydus.zip \
-                ./aserver/config/application.properties \
-                ./blserver/config/application* \
-                ./restserver/config/application.properties \
-                ./arestserver/config/application.properties \
-                ./autserver/config/application.properties \
+                ./aserver \
+                ./blserver \
+                ./restserver \
+                ./arestserver \
+                ./autserver \
                 ./cerbers_templates"""
     }
 
