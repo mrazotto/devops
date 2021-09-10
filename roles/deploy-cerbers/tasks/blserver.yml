@@ -36,12 +36,15 @@
 
 - name: Deploy CERBERS [blserver] - rest/arest/aut vars replace...
   replace:
-    path: "{{ops_dest}}/restserver/config/application.properties"
+    path: "{{config_prop_item.server}}/config/application.properties"
     regexp: "{{config_prop_item.regexp}}"
     replace: "{{config_prop_item.newline}}"
   with_items:
-    - {regexp: '^app.restserver.page-size.*', newline: 'app.restserver.page-size={{app_restserver_page_size}}'}
-    - {regexp: '^app.restserver.cors.host1.*', newline: 'app.restserver.cors.host1={{app_restserver_cors_host1}}'}
-    - {regexp: '^app.restserver.cors.host2.*', newline: 'app.restserver.cors.host2={{app_restserver_cors_host2}}'}
+    - {server: '{{ops_dest}}/restserver', regexp: '^app.restserver.page-size.*', newline: 'app.restserver.page-size={{app_restserver_page_size}}'}
+    - {server: '{{ops_dest}}/restserver', regexp: '^app.restserver.cors.host1.*', newline: 'app.restserver.cors.host1={{app_restserver_cors_host1}}'}
+    - {server: '{{ops_dest}}/restserver', regexp: '^app.restserver.cors.host2.*', newline: 'app.restserver.cors.host2={{app_restserver_cors_host2}}'}
+    - {server: '{{ops_dest}}/autserver', regexp: '^app.restserver.page-size.*', newline: 'app.restserver.page-size={{app_restserver_page_size}}'}
+    - {server: '{{ops_dest}}/autserver', regexp: '^app.restserver.cors.host1.*', newline: 'app.restserver.cors.host1={{app_restserver_cors_host1}}'}
+    - {server: '{{ops_dest}}/autserver', regexp: '^app.restserver.cors.host2.*', newline: 'app.restserver.cors.host2={{app_restserver_cors_host2}}'}
   loop_control:
     loop_var: config_prop_item
