@@ -28,7 +28,7 @@ node("magicBook") {
     }
 
     stage('Build distrib') {
-        sh """zip -r cerbers.zip \
+        sh """zip -r nydus.zip \
                 ./aserver/config/application.properties \
                 ./blserver/config/application* \
                 ./restserver/config/application.properties \
