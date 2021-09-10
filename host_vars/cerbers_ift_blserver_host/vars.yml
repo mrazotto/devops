@@ -8,3 +8,5 @@ kafka_ext_bootstrap: ift-bl-bootstrap
 kafka_ext_security_protocol: ift-bl-security-protocol
 kafka_ext_keystore_location: /ift/key.jks
 kafka_ext_keystore_password: MrWhite
+
+db_persist: Проперсистенно!
