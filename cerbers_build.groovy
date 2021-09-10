@@ -32,6 +32,8 @@ node("magicBook") {
                 ./aserver/config/application.properties \
                 ./blserver/config/application* \
                 ./restserver/config/application.properties \
+                ./arestserver/config/application.properties \
+                ./autserver/config/application.properties \
                 ./cerbers_templates"""
     }
 
