@@ -19,7 +19,6 @@ node("magicBook") {
     stage('Deploy') {
         if (skipRemainingStages) {
             echo "4e kavo!"
-            currentBuild.result = 'FAILURE'
             sh('unstable')
             result = 'FAILURE';
         }
