@@ -17,7 +17,7 @@ node("magicBook") {
                       url: 'https://github.com/mrazotto/devops.git']]])
     }
     stage('Deploy') {
-        if (!skipRemainingStages) {
+        if (skipRemainingStages) {
             echo "4e kavo!"
             currentBuild.result = 'UNSTABLE'
             result = 'UNSTABLE';
