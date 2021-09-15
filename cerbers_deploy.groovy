@@ -1,5 +1,7 @@
 import hudson.Util;
 
+def skipRemainingStages = true
+
 node("magicBook") {
 
     cleanWs()
@@ -15,6 +17,10 @@ node("magicBook") {
                       url: 'https://github.com/mrazotto/devops.git']]])
     }
     stage('Deploy') {
+        if (skipRemainingStages) {
+            color: 'RED'
+            exit 1
+        }
         sh """ansible-playbook playbook.yml"""
     }
 }

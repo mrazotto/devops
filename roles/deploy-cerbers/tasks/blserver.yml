@@ -34,6 +34,10 @@
 
 ### restserver arestserver autserver configs --->
 
+# раз конфиг не растет, могу не искать переменные в нем через regexp (как описано ниже), а иметь статичный template
+# с такими же блоками {% if %}{{...}}{% else %}...{% endif %}!!!
+# (эти конфиги даже в сборке не нужны, в таком случае)
+
 - name: Deploy CERBERS [blserver] - rest/arest/aut vars replace...
   replace:
     path: "{{config_prop_item.server}}/config/application.properties"

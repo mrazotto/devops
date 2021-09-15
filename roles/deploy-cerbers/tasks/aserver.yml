@@ -10,7 +10,3 @@
       - aserver/*
     remote_src: yes
 
-- name: Deploy CERBERS [aserver] - templating...
-  template:
-    src: "{{ops_dest}}/cerbers_templates/aserver/config/application.properties.j2"
-    dest: "{{ops_dest}}/aserver/config/application.properties"
