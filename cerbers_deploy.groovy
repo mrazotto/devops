@@ -19,7 +19,7 @@ node("magicBook") {
     stage('Deploy') {
         if (skipRemainingStages) {
             color: 'RED'
-            exit 1
+            System.exit(1)
         }
         sh """ansible-playbook playbook.yml"""
     }
