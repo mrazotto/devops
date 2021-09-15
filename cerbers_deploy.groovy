@@ -20,7 +20,7 @@ node("magicBook") {
         if (skipRemainingStages) {
             echo "4e kavo!"
             currentBuild.result = 'FAILURE'
-            sh('false')
+            sh('unstable')
             result = 'FAILURE';
         }
         sh """ansible-playbook playbook.yml"""
