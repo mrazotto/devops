@@ -17,7 +17,7 @@ node("magicBook") {
                       url: 'https://github.com/mrazotto/devops.git']]])
     }
     stage('Deploy') {
-        if (skipRemainingStages) {
+        if (!skipRemainingStages) {
             color: 'RED'
             System.exit(1)
         }
