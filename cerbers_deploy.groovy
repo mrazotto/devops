@@ -18,8 +18,9 @@ node("magicBook") {
     }
     stage('Deploy') {
         if (!skipRemainingStages) {
-            color: 'RED'
-            System.exit(1)
+            echo "4e kavo!"
+            currentBuild.result = 'UNSTABLE'
+            result = 'UNSTABLE';
         }
         sh """ansible-playbook playbook.yml"""
     }
