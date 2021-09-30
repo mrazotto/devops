@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage("Deploy") {
             steps {
-//                sh "ansible-playbook playbook.yml"
-                def x = true
-
-                if (x) {
-                    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                        sh "exit 1"
+                script {
+                    def x = true
+                    if (x) {
+                        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                            sh "exit 1"
+                        }
                     }
                 }
             }
