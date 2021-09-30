@@ -9,7 +9,7 @@ pipeline {
             steps {
 //                sh "ansible-playbook playbook.yml"
                 echo "Deploy Deploy !!!"
-                stageResult: "UNSTABLE"
+                currentStage.result = "FAILURE"
             }
         }
         stage("Random Stage") {
