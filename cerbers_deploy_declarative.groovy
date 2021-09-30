@@ -8,7 +8,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 script {
-                    def x = false
+                    def x = true
                     if (x) {
                         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                             sh "exit 1"
