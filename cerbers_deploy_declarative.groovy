@@ -15,6 +15,7 @@ pipeline {
                         }
                     }
                 }
+                echo "AAAAAAAAAAAA"
             }
         }
         stage("Random Stage") {
