@@ -7,13 +7,8 @@ pipeline {
     stages {
         stage("Deploy") {
             steps {
-                script {
-                    def x = true
-                    if (x) {
-                        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                            sh "exit 1"
-                        }
-                    }
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh "exit 1"
                 }
                 echo "AAAAAAAAAAAA"
             }
