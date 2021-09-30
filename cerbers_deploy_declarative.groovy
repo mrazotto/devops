@@ -7,7 +7,9 @@ pipeline {
     stages {
         stage("Deploy") {
             steps {
-                sh "ansible-playbook playbook.yml"
+//                sh "ansible-playbook playbook.yml"
+                echo "Deploy Deploy !!!"
+                stageResult: "FAILURE"
             }
         }
         stage("Random Stage") {
