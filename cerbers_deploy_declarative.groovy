@@ -11,6 +11,8 @@ pipeline {
                     sh "exit 1"
                 }
                 echo "AAAAAAAAAAAA"
+                echo "BBBBBB"
+                echo "CCC"
             }
         }
         stage("Random Stage") {
