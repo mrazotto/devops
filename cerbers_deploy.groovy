@@ -19,7 +19,7 @@ node("magicBook") {
     stage('Deploy') {
         if (skipRemainingStages) {
             echo "CHECKING FAILED..."
-            stageResult."{STAGE_NAME}" = "UNSTABLE"
+            stageResult."Deploy" = "UNSTABLE"
         }
         sh """ansible-playbook playbook.yml"""
     }
