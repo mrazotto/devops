@@ -19,7 +19,7 @@ node("magicBook") {
     stage('Deploy') {
         if (skipRemainingStages) {
             echo "CHECKING FAILED..."
-            result = "FAIL"
+            sh "exit 1"
         }
         sh """ansible-playbook playbook.yml"""
     }
