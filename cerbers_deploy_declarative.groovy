@@ -8,8 +8,9 @@ pipeline {
         stage("Deploy") {
             steps {
 //                sh "ansible-playbook playbook.yml"
-                echo "Deploy Deploy !!!"
-                stageResult: 'UNSTABLE'
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh "exit 1"
+                }
             }
         }
         stage("Random Stage") {
