@@ -22,7 +22,7 @@ node("magicBook") {
             currentBuild.result = 'FAILURE'
             result = 'FAILURE'
 
-            echo "### Stage name: ${env.STAGE_RESULT}"
+            sh "printenv"
         }
 //        sh """ansible-playbook playbook.yml"""
     }
