@@ -23,6 +23,8 @@ node("magicBook") {
             result = 'FAILURE'
 
             sh "printenv"
+            env.CI = false
+            sh "printenv"
         }
 //        sh """ansible-playbook playbook.yml"""
     }
